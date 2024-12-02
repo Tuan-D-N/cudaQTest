@@ -30,3 +30,5 @@ int main(int argc, char *argv[])
     auto duration = std::chrono::duration<double>(stop - start);
     std::cout << "It took " << duration.count() << " seconds.\n";
 }
+// Compile with nvq++ filename -o fileout --target=nvidia defult
+// Compile with nvq++ filename -o fileout --target=qpp-cpu

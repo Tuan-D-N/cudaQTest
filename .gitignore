@@ -1,1 +1,2 @@
-_cudaPythonNotation.py
+_cudaPythonNotation*
+*.o

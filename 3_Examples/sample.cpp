@@ -18,7 +18,7 @@ __qpu__ void kernal(const int qubitCount)
 int main(int argc, char const *argv[])
 {
     int qubitCount = 2;
-    cudaq::draw(kernal, qubitCount);
+    std::cout << cudaq::draw(kernal, qubitCount);
 
     auto result = cudaq::sample(1000, kernal, qubitCount);
 

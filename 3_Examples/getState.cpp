@@ -18,9 +18,8 @@ int main(int argc, char const *argv[])
 {
     int qubit_count = 2;
     namespace spin = cudaq::spin;
-    auto hamiltonian = spin::z(0) + spin::y(1) + spin::x(0) * spin::z(0);
 
-    auto result = cudaq::get_state(kernel, hamiltonian, qubit_count);
+    auto result = cudaq::get_state(kernel, qubit_count);
 
     result.dump();
 

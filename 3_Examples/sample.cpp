@@ -22,5 +22,7 @@ int main(int argc, char const *argv[])
 
     auto result = cudaq::sample(1000, kernal, qubitCount);
 
+    result.dump();
+
     return 0;
 }

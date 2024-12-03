@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 
     auto result = cudaq::observe(kernel, hamiltonian, qubit_count).expectation();
 
-    std::cout << result;
+    std::cout << '<H> =' << result << std::endl;
 
     return 0;
 }

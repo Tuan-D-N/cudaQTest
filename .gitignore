@@ -1,2 +1,3 @@
 _cudaPythonNotation*
 *.o
+__pycache__/*

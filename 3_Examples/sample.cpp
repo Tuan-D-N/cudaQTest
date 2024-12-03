@@ -11,7 +11,7 @@ __qpu__ void kernal(const int qubitCount)
 
     for (int i : cudaq::range(1, qubitCount))
     {
-        cudaq::x(qvector[0], qvector[1]);
+        cudaq::x<cudaq::ctrl>(qvector[0], qvector[1]);
     }
 }
 

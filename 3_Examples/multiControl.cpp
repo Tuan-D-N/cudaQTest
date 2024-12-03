@@ -4,27 +4,37 @@
 #include <cudaq/algorithms/draw.h>
 #include <cudaq/spin_op.h>
 
-__qpu__ void x_kernel(cudaq::qubit &qubit)
+struct x_kernel
 {
-    x(qubit);
-}
+    auto operator()(cudaq::qubit &qubit) __qpu__
+    {
+        x(qubit);
+    }
+};
 
-__qpu__ void kernel()
+struct ccnot_test
 {
-    auto control_vector = cudaq::qvector(2);
-    auto target = cudaq::qubit();
+    // constrain the signature of the incoming kernel
+    void operator()(cudaq::takes_qubit auto &&apply_x) __qpu__
+    {
+        cudaq::qvector qs(3);
 
-    cudaq::x(control_vector);
-    cudaq::x(target);
-    cudaq::x(control_vector[1]);
-    cudaq::control(x_kernel, control_vector, target);
-}
+        x(qs);
+        x(qs[1]);
+
+        // Control U (apply_x) on the first two qubits of
+        // the allocated register.
+        cudaq::control(apply_x, qs.front(2), qs[2]);
+
+        mz(qs);
+    }
+};
 
 int main(int argc, char const *argv[])
 {
-    std::cout << cudaq::draw(kernel);
 
-    auto results = cudaq::sample(1000, kernel);
+    std::cout << cudaq::draw(ccnot_test{}, x_kernel{});
+    auto results = cudaq::sample(ccnot_test{}, x_kernel{});
     results.dump();
 
     return 0;

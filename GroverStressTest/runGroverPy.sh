@@ -5,6 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 
+load_modules_for cudaq
 for repeat in {1..5}
 do
     for qubit in $(seq 10 5 60)

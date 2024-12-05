@@ -13,8 +13,8 @@ if [ -z "$CPP_FILES" ]; then
   exit 1
 fi
 
-# failed ionq iqm oqc orca quantinuum
-targets=(density-matrix-cpu nvidia-fp64 nvidia-mqpu-fp64 nvidia-mqpu-mps nvidia-mqpu nvidia nvqc photonics qpp-cpu remote-mqpu tensornet-mps tensornet) 
+# failed ionq iqm oqc orca quantinuum density-matrix-cpu remote-mqpu nvidia-fp64 nvidia-mqpu-fp64 photonics qpp-cpu tensornet-mps tensornet
+targets=(nvidia-mqpu-mps nvidia-mqpu nvidia nvqc) 
 
 for target in ${targets[@]}
 do

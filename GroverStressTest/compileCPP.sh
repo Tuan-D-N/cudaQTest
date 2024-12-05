@@ -13,22 +13,33 @@ if [ -z "$CPP_FILES" ]; then
   exit 1
 fi
 
-# Loop through each .cpp file
-for file in $CPP_FILES; do
-  # Get the filename without the extension
-  BASENAME=$(basename "$file" .cpp).o
-  
-  # Compile the .cpp file into an executable
-  echo "Compiling $file..."
-  $CXX $CXXFLAGS "$file" -o "$BASENAME"
-  
-  # Check if compilation succeeded
-  if [ $? -eq 0 ]; then
-    echo "Compilation successful: $BASENAME"
-  else
-    echo "Compilation failed for: $file"
-    exit 1
-  fi
+
+#!/bin/bash
+
+for target in nvidia nvidia-mgpu nvidia-mqpu
+do
+    
+
+
+
+  # Loop through each .cpp file
+  for file in $CPP_FILES; do
+    # Get the filename without the extension
+    BASENAME=$(basename "$file" .cpp).o
+    
+    # Compile the .cpp file into an executable
+    echo "Compiling $file..."
+    $CXX $CXXFLAGS "$file" -o "${BASENAME}_${target}" --target=${target}
+    
+    # Check if compilation succeeded
+    if [ $? -eq 0 ]; then
+      echo "Compilation successful: $BASENAME"
+    else
+      echo "Compilation failed for: $file"
+      exit 1
+    fi
+  done
+
 done
 
 echo "All files compiled successfully."

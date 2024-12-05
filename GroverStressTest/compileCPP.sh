@@ -25,11 +25,11 @@ do
   # Loop through each .cpp file
   for file in $CPP_FILES; do
     # Get the filename without the extension
-    BASENAME=$(basename "$file" .cpp).o
+    BASENAME=$(basename "$file" .cpp)
     
     # Compile the .cpp file into an executable
     echo "Compiling $file..."
-    $CXX $CXXFLAGS "$file" -o "${BASENAME}_${target}" --target=${target}
+    $CXX $CXXFLAGS "$file" -o "${BASENAME}_${target}.o" --target=${target}
     
     # Check if compilation succeeded
     if [ $? -eq 0 ]; then

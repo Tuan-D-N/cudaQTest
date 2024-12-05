@@ -49,7 +49,8 @@ int main(int argc, char const *argv[])
 
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration<double>(stop - start);
-    std::cout << "Qubits = " << qubit_count << std::endl;
-    std::cout << "It took " << duration.count() << " seconds.\n";
+    // std::cout << "Qubits = " << qubit_count << std::endl;
+    // std::cout << "It took " << duration.count() << " seconds.\n";
+    std::cout << qubit_count << "," << duration.count() << std::endl;
     return 0;
 }

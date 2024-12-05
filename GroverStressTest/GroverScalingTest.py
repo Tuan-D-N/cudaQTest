@@ -41,5 +41,6 @@ code_to_time = 'cudaq.sample(kernel, qubit_count, shots_count=5)'
 if cudaq.num_available_gpus() > 0:
     # Execute on GPU backend.
     cudaq.set_target('nvidia')
-    print(f'qubit: {qubit_count}')
-    print(timeit.timeit(stmt=code_to_time, globals=globals(), number=1))
+    # print(f'qubit: {qubit_count}')
+    time = timeit.timeit(stmt=code_to_time, globals=globals(), number=1)
+    print(qubit_count, time)

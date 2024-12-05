@@ -14,3 +14,11 @@ do
     done
 done
 
+load_modules_for cudaq
+for repeat in {1..5}
+do
+    for qubit in $(seq 20 1 30)
+    do
+        srun --exclusive --gres=gpu:1 --ntasks=1 --cpus-per-task=32 ./GroverScalingTest_multiCtrl_functors.o $qubit >> groverResults/GroverScalingTest_multiCtrl_functors_qubit${qubit}
+    done
+done

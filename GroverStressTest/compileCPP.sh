@@ -30,14 +30,14 @@ do
     
     # Compile the .cpp file into an executable
     echo "Compiling $file... for target = ${target}"
-    $CXX $CXXFLAGS "$file" -o "$newName" --target=${target}
+    $CXX $CXXFLAGS "$file" -o "$newName" --target=${target} >> compile.log
     
     # Check if compilation succeeded
     if [ $? -eq 0 ]; then
       echo "Compilation successful: $newName"
     else
       echo "Compilation failed for: $file"
-      exit 1
+      break
     fi
   done
 

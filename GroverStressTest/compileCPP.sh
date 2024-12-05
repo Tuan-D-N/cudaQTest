@@ -16,7 +16,7 @@ fi
 
 targets=(density-matrix-cpu ionq iqm nvidia-fp64 nvidia-mqpu-fp64 nvidia-mqpu-mps nvidia-mqpu nvidia nvqc oqc orca photonics qpp-cpu quantinuum remote-mqpu tensornet-mps tensornet) 
 
-for target in targets
+for target in $(targets)
 do
     
 

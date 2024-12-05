@@ -18,7 +18,7 @@ done
 
 for repeat in {1..5}
 do
-    for qubit in $(seq 20 1 60)
+    for qubit in $(seq 21 1 60)
     do
         srun --exclusive --gres=gpu:${numGPU} --ntasks=${numGPU} --cpus-per-task=$((32 * numGPU)) python3 $fileNm $qubit >> ${resultDIR}/${baseNm}_${numGPU}GPU
     done

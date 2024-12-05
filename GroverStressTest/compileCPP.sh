@@ -14,9 +14,9 @@ if [ -z "$CPP_FILES" ]; then
 fi
 
 
-#!/bin/bash
+targets=(density-matrix-cpu ionq iqm nvidia-fp64 nvidia-mqpu-fp64 nvidia-mqpu-mps nvidia-mqpu nvidia nvqc oqc orca photonics qpp-cpu quantinuum remote-mqpu tensornet-mps tensornet) 
 
-for target in nvidia nvidia-mgpu nvidia-mqpu
+for target in targets
 do
     
 

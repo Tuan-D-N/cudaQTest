@@ -16,7 +16,7 @@ fi
 # Loop through each .cpp file
 for file in $CPP_FILES; do
   # Get the filename without the extension
-  BASENAME=$(basename "$file" .cpp)
+  BASENAME=$(basename "$file" .cpp).o
   
   # Compile the .cpp file into an executable
   echo "Compiling $file..."

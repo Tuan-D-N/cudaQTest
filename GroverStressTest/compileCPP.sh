@@ -26,14 +26,15 @@ do
   for file in $CPP_FILES; do
     # Get the filename without the extension
     BASENAME=$(basename "$file" .cpp)
+    newName=${BASENAME}_${target}.o
     
     # Compile the .cpp file into an executable
-    echo "Compiling $file..."
-    $CXX $CXXFLAGS "$file" -o "${BASENAME}_${target}.o" --target=${target}
+    echo "Compiling $file... for target = ${target}"
+    $CXX $CXXFLAGS "$file" -o "$newName" --target=${target}
     
     # Check if compilation succeeded
     if [ $? -eq 0 ]; then
-      echo "Compilation successful: $BASENAME"
+      echo "Compilation successful: $newName"
     else
       echo "Compilation failed for: $file"
       exit 1

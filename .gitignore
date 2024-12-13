@@ -1,4 +1,4 @@
 _cudaPythonNotation*
 *.o
 __pycache__/*
-*/groverResults/*
+*/groverResults*/*

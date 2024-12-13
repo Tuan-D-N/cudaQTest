@@ -36,7 +36,7 @@ def kernel(qubit_count: int):
 
 
 qubit_count = int(sys.argv[1]) if 1 < len(sys.argv) else 27
-code_to_time = 'cudaq.sample(kernel, qubit_count, shots_count=5)'
+code_to_time = 'cudaq.sample(kernel, qubit_count, shots_count=100)'
 
 if cudaq.num_available_gpus() > 0:
     # Execute on GPU backend.

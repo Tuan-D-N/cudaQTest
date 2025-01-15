@@ -2,3 +2,6 @@ _cudaPythonNotation*
 *.o
 __pycache__/*
 */groverResults*/*
+*/GPUMeasure*/*
+*/dataFiles*/*
+*/statsFiles*/*

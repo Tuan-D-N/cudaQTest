@@ -1,0 +1,137 @@
+Generating SQLite file cudaQ.sqlite from cudaQ.nsys-rep
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/nvtx_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain NV Tools Extension (NVTX) data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/osrt_sum.py]... 
+
+ ** OS Runtime Summary (osrt_sum):
+
+ Time (%)  Total Time (ns)  Num Calls     Avg (ns)         Med (ns)      Min (ns)    Max (ns)       StdDev (ns)             Name         
+ --------  ---------------  ---------  ---------------  ---------------  --------  -------------  ---------------  ----------------------
+     48.4    2,413,319,584          2  1,206,659,792.0  1,206,659,792.0    71,104  2,413,248,480  1,706,374,086.8  pthread_cond_wait     
+     47.2    2,352,962,144         34     69,204,768.9    100,105,136.0     1,280    100,112,672     42,601,104.3  poll                  
+      4.3      213,270,784        801        266,255.7         24,896.0     1,056     15,264,864        748,719.2  ioctl                 
+      0.0          928,512         38         24,434.5         27,120.0     3,168         96,480         18,249.4  mmap64                
+      0.0          514,944          3        171,648.0        170,400.0   163,904        180,640          8,437.5  pthread_create        
+      0.0          384,320          1        384,320.0        384,320.0   384,320        384,320              0.0  pthread_join          
+      0.0          327,712         56          5,852.0          5,616.0     1,536         12,320          2,039.2  open64                
+      0.0          312,736         41          7,627.7          4,000.0     2,016         63,008         10,622.5  fopen                 
+      0.0          295,296         31          9,525.7          7,680.0     2,240         53,792          8,904.6  mmap                  
+      0.0          220,128          9         24,458.7         20,256.0    13,504         39,040          9,292.6  sem_timedwait         
+      0.0           56,512          5         11,302.4          3,584.0     3,104         32,832         12,827.4  fgets                 
+      0.0           44,320          6          7,386.7          6,640.0     1,088         14,208          4,418.9  munmap                
+      0.0           38,496          9          4,277.3          3,520.0     1,056          8,416          2,628.3  open                  
+      0.0           38,464          5          7,692.8          2,528.0     1,600         23,648          9,358.0  fwrite                
+      0.0           34,592         16          2,162.0          1,584.0     1,024          7,392          1,652.5  fclose                
+      0.0           31,296         10          3,129.6          3,360.0     1,664          4,256            942.2  write                 
+      0.0           19,040          2          9,520.0          9,520.0     6,208         12,832          4,683.9  fread                 
+      0.0           17,280          3          5,760.0          7,136.0     2,368          7,776          2,954.9  pipe2                 
+      0.0           16,320          2          8,160.0          8,160.0     6,304         10,016          2,624.8  socket                
+      0.0           11,648          3          3,882.7          4,512.0     1,568          5,568          2,072.9  pthread_cond_broadcast
+      0.0           10,528          6          1,754.7          1,456.0     1,248          2,656            600.9  read                  
+      0.0            9,920          4          2,480.0          2,048.0     1,568          4,256          1,212.5  fopen64               
+      0.0            9,728          1          9,728.0          9,728.0     9,728          9,728              0.0  connect               
+      0.0            2,176          1          2,176.0          2,176.0     2,176          2,176              0.0  putc                  
+      0.0            1,632          1          1,632.0          1,632.0     1,632          1,632              0.0  bind                  
+      0.0            1,024          1          1,024.0          1,024.0     1,024          1,024              0.0  fcntl                 
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/cuda_api_sum.py]... 
+
+ ** CUDA API Summary (cuda_api_sum):
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)    Min (ns)   Max (ns)     StdDev (ns)                         Name                      
+ --------  ---------------  ---------  -------------  -----------  --------  -----------  -------------  ------------------------------------------------
+     54.5    1,257,539,936         11  114,321,812.4      3,392.0       800  628,816,480  254,341,860.9  cudaDeviceSynchronize                           
+     37.9      875,004,064         16   54,687,754.0    131,088.0       800  866,100,448  216,379,000.3  cudaFree                                        
+      6.5      150,314,240      2,264       66,393.2      2,272.0     1,856      729,856      190,396.7  cudaLaunchKernel                                
+      0.8       17,376,800         11    1,579,709.1  1,051,232.0     3,264    5,385,024    1,870,788.7  cudaMalloc                                      
+      0.1        2,881,664          2    1,440,832.0  1,440,832.0   942,624    1,939,040      704,572.5  cudaGetDeviceProperties_v2_v12000               
+      0.1        2,668,640         44       60,650.9      2,272.0     1,696      635,296      183,479.9  cudaMemcpyAsync                                 
+      0.0          197,600      1,613          122.5         96.0        32        5,312          166.6  cuGetProcAddress_v2                             
+      0.0           35,552         38          935.6        368.0       224        8,704        1,514.0  cudaEventCreateWithFlags                        
+      0.0           26,880          1       26,880.0     26,880.0    26,880       26,880            0.0  cudaMemcpy                                      
+      0.0           21,888         38          576.0        352.0       160        4,032          707.0  cudaEventDestroy                                
+      0.0            8,832          5        1,766.4      1,504.0     1,312        2,592          535.7  cuInit                                          
+      0.0            7,232          1        7,232.0      7,232.0     7,232        7,232            0.0  cudaOccupancyAvailableDynamicSMemPerBlock_v10200
+      0.0            7,168         14          512.0        352.0       192        2,464          569.3  cudaOccupancyMaxActiveClusters_v11070           
+      0.0            4,224          5          844.8        224.0       128        3,360        1,408.7  cuModuleGetLoadingMode                          
+      0.0              928          2          464.0        464.0       224          704          339.4  cudaGetDriverEntryPoint_v11030                  
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/cuda_gpu_kern_sum.py]... 
+
+ ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  ----------------------------------------------------------------------------------------------------
+     81.4    1,147,106,989      1,804  635,868.6  635,968.0   633,760   638,432        884.5  void custatevec::constMatApplLoopKernel<(int)64, (int)1, custatevec::CsComplex<float>, (int)1, cust…
+     18.5      261,076,190        410  636,771.2  636,704.0   635,808   638,656        484.6  void custatevec::constMatApplKernel_Relocate<(int)64, custatevec::CsComplex<float>, (int)1, custate…
+      0.0          635,936          2  317,968.0  317,968.0   317,856   318,080        158.4  void nvqir::cudaInitializeDeviceStateVector<float2>(T1 *, long)                                     
+      0.0          290,240          1  290,240.0  290,240.0   290,240   290,240          0.0  void custatevec::<unnamed>::calculateAbs2SumIn10BitSegmentsKernel<float>(const custatevec::CsComple…
+      0.0           73,152         40    1,828.8    1,824.0     1,664     2,304        129.9  void custatevec::constMatApplKernel<(int)64, custatevec::CsComplex<float>, (int)1, custatevec::Empt…
+      0.0           14,432          1   14,432.0   14,432.0    14,432    14,432          0.0  void cub::DeviceRadixSortSingleTileKernel<cub::DeviceRadixSortPolicy<double, int, unsigned int>::Po…
+      0.0           11,104          1   11,104.0   11,104.0    11,104    11,104          0.0  void custatevec::<unnamed>::samplingKernel<custatevec::CsComplex<float>>(const double *, long, cons…
+      0.0            6,560          1    6,560.0    6,560.0     6,560     6,560          0.0  void cub::DeviceRadixSortSingleTileKernel<cub::DeviceRadixSortPolicy<long, cub::NullType, unsigned …
+      0.0            5,856          1    5,856.0    5,856.0     5,856     5,856          0.0  custatevec::<unnamed>::intervalCumulativeSumKernel(double *, int)                                   
+      0.0            3,808          1    3,808.0    3,808.0     3,808     3,808          0.0  void custatevec::<unnamed>::blockwiseCumulativeSumKernel<custatevec::<unnamed>::calculateCumulative…
+      0.0            2,400          1    2,400.0    2,400.0     2,400     2,400          0.0  custatevec::<unnamed>::applyPrevCumsumKernel(double *, long)                                        
+      0.0            1,376          1    1,376.0    1,376.0     1,376     1,376          0.0  void custatevec::transformKernel<custatevec::Sampler::sample(custatevecContext &, long *, const cus…
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/cuda_gpu_mem_time_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Time) (cuda_gpu_mem_time_sum):
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)            Operation           
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ------------------------------
+     89.9           80,320     42   1,912.4   1,952.0       800     3,520        482.4  [CUDA memcpy Host-to-Device]  
+      8.5            7,584      2   3,792.0   3,792.0     3,616     3,968        248.9  [CUDA memcpy Device-to-Host]  
+      1.6            1,408      1   1,408.0   1,408.0     1,408     1,408          0.0  [CUDA memcpy Device-to-Device]
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/cuda_gpu_mem_size_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Size) (cuda_gpu_mem_size_sum):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)            Operation           
+ ----------  -----  --------  --------  --------  --------  -----------  ------------------------------
+      0.425     42     0.010     0.010     0.001     0.014        0.002  [CUDA memcpy Host-to-Device]  
+      0.001      2     0.000     0.000     0.000     0.001        0.001  [CUDA memcpy Device-to-Host]  
+      0.000      1     0.000     0.000     0.000     0.000        0.000  [CUDA memcpy Device-to-Device]
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/openmp_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain OpenMP event data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/opengl_khr_range_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain KHR Extension (KHR_DEBUG) data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/opengl_khr_gpu_range_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain GPU KHR Extension (KHR_DEBUG) data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/vulkan_marker_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain Vulkan Debug Extension (Vulkan Debug Util) data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/vulkan_gpu_marker_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain GPU Vulkan Debug Extension (GPU Vulkan Debug markers) data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/dx11_pix_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain DX11 CPU debug markers.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/dx12_gpu_marker_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain DX12 GPU debug markers.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/dx12_pix_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain DX12 CPU debug markers.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/wddm_queue_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain WDDM context data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/um_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/um_total_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/um_cpu_page_faults_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [cudaQ.sqlite] with [/opt/nvidia/hpc_sdk/Linux_aarch64/24.5/profilers/Nsight_Systems/host-linux-armv8/reports/openacc_sum.py]... 
+SKIPPED: cudaQ.sqlite does not contain OpenACC event data.
+

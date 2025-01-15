@@ -1,0 +1,1 @@
+scp -r tnguyen5@ella.pawsey.org.au:/software/projects/interns202413/tnguyen5/cudaQTest/compareCuQuantumvsCudaQ/grover/* /home/tuan_nguyen/coding/EllaSetonixAccess/CudaqStudyWork/compareCuQuantumvsCudaQ/grover/
